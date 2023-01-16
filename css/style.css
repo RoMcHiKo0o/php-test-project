@@ -1,0 +1,25 @@
+
+.error, .signin-error {
+	color:red;
+	display: inline-block;
+}
+
+.register-form {
+	width: 50%;
+	float: left;
+	height: 400px;
+}
+
+.signin-form {
+	width: 50%;
+	float: right;
+	height: 400px;
+}
+.auth {
+	text-align: center;
+	font-size: 20px;
+}
+
+.not-auth {
+	visibility: hidden;
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Register</title>
+</head>
+<body>
+    <div>
+        <form method="post" class="register-form">
+            <h1>Register</h1>
+            <div>
+                <label for="login" pattern="">Login</label>
+                <input type="text" class="login">
+                <p class="error login-error"></p>
+            </div>
+            <div>
+                <label for="password">Password</label>
+                <input type="password" class="password">
+                <p class="error password-error"></p>
+            </div>
+
+            <div>
+                <label for="confirm-password">Confirm password</label>
+                <input type="password" class="confirm-password">
+                <p class="error confirm-password-error"></p>
+            </div>
+            
+            <div>
+                <label for="email">Email</label>
+                <input class="email">
+                <p class="error email-error"></p>
+            </div>
+
+            <div>
+                <label for="name">Name</label>
+                <input class="name">
+                <p class="error name-error"></p>
+            </div>
+
+            <button type="submit" class="registerbtn">Register</button>
+            <p class="error db-error"></p>
+            <p class="success-register" style="color:green"></p>
+
+        </form>
+
+
+        <form method="post" class="signin-form">
+            <h1>Sign in</h1>
+            <div>
+                <label for="login">Login</label>
+                <input type="text" class="signin-login" required>
+                <p class="signin-error signin-login-error"></p>
+            </div>
+            <div>
+                <label for="password">Password</label>
+                <input type="password" class="signin-password" required>
+                <p class="signin-error signin-password-error"></p>
+            </div>
+
+            <button type="submit" class="signinbtn">Sign in</button>
+            <p class="signin-error signin-db-error"></p>
+        </form>
+    </div>
+
+    <div class="auth not-auth">
+        <p id="auth"></p>
+        <button id="logout-btn">Выйти</button>
+    </div>
+
+
+    <script src="form.js"></script>
+    
+</body>
+</html>
