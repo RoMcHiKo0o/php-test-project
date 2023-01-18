@@ -34,6 +34,13 @@ class DB_JSON {
 		return $tmp_data;
 	}
 
+	//проверить есть ли юзер в бд с таким логином или такой почтой
+	public function is_in_db($instance) {
+		$data = $this->select(["login"=>$instance['login']]);
+		return (empty($this->select(["login"=>$instance['login']])) and empty($this->select(["email"=>$instance['email']])));
+		
+	}
+
 	// проверить есть ли юзер в бд
 	public function is_user($instance) {
 		$data = $this->select(["login"=>$instance['login']]);
