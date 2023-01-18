@@ -1,6 +1,5 @@
 <?php
 
-
 class User {
 
 	private $user_data;
@@ -72,7 +71,7 @@ class User {
 
 	private function validate_db() {
 		$res = $this->db->is_in_db($this->user_data);
-		if (!$res) {
+		if ($res) {
 			$this->response["Name"] = $this->name;
 			$this->response['status'] = true;
 		}
