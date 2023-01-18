@@ -1,4 +1,4 @@
-	<?php
+<?php
 
 
 class User {
@@ -35,7 +35,7 @@ class User {
 		}
 	}
 	private function validate_password() {
-		if (mb_strlen($this->password)<6 || !(preg_match("/[a-zA-Z]+/", $this->password) and preg_match("/[0-9]+/", $this->password)) || preg_match('/\s/', $this->password)) {
+		if (mb_strlen($this->password)<6 || !(preg_match("/[a-zA-Z]+/", $this->password) and preg_match("/[0-9]+/", $this->password)) || preg_match('/\s/', $this->password) || preg_match("/[!@#$%^&*()_\-=+?:;№)]+/", $this->password)) {
 				$this->response['errors'][] = [
 				"error"=> "password-error",
 				"text"=> "Пароль должен быть минимум 6 символов , обязательно должны состоять из цифр и букв"
